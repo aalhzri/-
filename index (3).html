@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لاونج شاي وجباتي | تجربة النخبة</title>
+    <!-- استيراد خطوط فخمة وأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #C5A059;
+            --dark-gold: #8E6D31;
+            --black: #0A0A0A;
+            --gray: #1C1C1C;
+            --text-gray: #B0B0B0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--black);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* تأثير التدرج في الخلفية */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(197, 160, 89, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* نافبار شفاف وفخم */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: var(--gold);
+            margin-right: 20px;
+            font-size: 1.4rem;
+            transition: 0.4s;
+        }
+
+        .social-icons a:hover {
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* الهيرو سكشن */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(to left, rgba(0,0,0,0.9), transparent 60%), 
+                        url('https://images.unsplash.com/photo-1594494024039-df3365c79005?q=80&w=1500') no-repeat center center/cover;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Amiri', serif;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text span {
+            color: var(--gold);
+        }
+
+        .hero-text p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            border-right: 3px solid var(--gold);
+            padding-right: 15px;
+        }
+
+        /* زر فخم */
+        .btn-luxury {
+            display: inline-block;
+            padding: 15px 45px;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: 1px;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .btn-luxury:hover {
+            background: white;
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.5);
+        }
+
+        /* قائمة الطعام الذهبية */
+        .menu-section {
+            padding: 100px 8%;
+            background: var(--gray);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Amiri', serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            display: inline-block;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 25px;
+        }
+
+        .item-info h3 {
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .item-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted var(--dark-gold);
+            margin: 0 15px;
+        }
+
+        .price {
+            color: var(--gold);
+            font-weight: bold;
+            font-family: 'Amiri', serif;
+        }
+
+        footer {
+            padding: 50px 8%;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2.8rem; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .hero { background-position: right; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">شاي وجباتي</a>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/966500000000"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>لأنك تستحق<br><span>الأفضل دائماً</span></h1>
+            <p>نجمع لك عراقة الماضي بفخامة الحاضر، في كل كوب كرك وكل قطعة جباتي نصنعها من أجلك.</p>
+            <a href="#menu" class="btn-luxury">استعرض المنيو</a>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="menu-grid">
+            <!-- قائمة الكرك -->
+            <div class="menu-category">
+                <h2>أصناف الكرك</h2>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h3>كرك الزعفران الملكي</h3>
+                        <p>بأنقى خيوط الزعفران الأصلي</p>
+                    </div>
+                    <div class="dots"></div>
+                    <div class="price">15 SAR</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h3>كرك الهيل الفاخر</h3>
+                        <p>مبهر بالهيل الهندي الفاخر</p>
+                    </div>
+                    <div class="dots"></div>
+                    <div class="price">12 SAR</div>
+                </div>
+            </div>
+
+            <!-- قائمة الجباتي -->
+            <div class="menu-category">
+                <h2>أصناف الجباتي</h2>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h3>جباتي ترافل وبري</h3>
+                        <p>بزيت الترافل الفاخر والجبن</p>
+                    </div>
+                    <div class="dots"></div>
+                    <div class="price">28 SAR</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h3>جباتي نوتيلا وبندق</h3>
+                        <p>للتحلية الفاخرة بعد الوجبة</p>
+                    </div>
+                    <div class="dots"></div>
+                    <div class="price">18 SAR</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 شاي وجباتي لاونج</p>
+        <p style="font-size: 12px; margin-top: 10px;">المملكة العربية السعودية - الرياض</p>
+    </footer>
+
+</body>
+</html>
